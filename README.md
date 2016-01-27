@@ -39,3 +39,28 @@ After that is cloned, use `vim` to open an file and run `:BundleInstall`.
 
 *Note: These steps only need to be done once during install. You will NOT need
 to run them every time.*
+
+### Mac Install Guide
+
+```
+cd ~/
+git clone --recursive https://github.com/mrhappyasthma/.vim.git
+ln -s .vimrc/vimrc .vimrc
+```
+
+or
+
+```
+cd ~/
+git clone https://github.com/mrhappyasthma/.vim.git
+ln -s .vimrc/vimrc .vimrc
+cd .vim
+git submodule update --init --recursive
+```
+
+After that is cloned, use `vim` to open an file and run `:BundleInstall`.
+
+*Note: These steps only need to be done once during install. You will NOT need
+to run them every time.*
+
+*Note2: On Mac, you may need to use `fn` key before using commands like `F2`. The arrow key mapping also does not seem to work.*
