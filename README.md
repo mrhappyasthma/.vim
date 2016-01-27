@@ -12,7 +12,7 @@ before installing this.
 | :vs                | Open another tab as a vertical split.                                                                            |
 | :sp                | Open another tab as a horizontal split.                                                                          |
 | :qa                | Quit all tabs.                                                                                                   |
-| ctrl + <arrow key> | Use `ctrl` + any arrow key to jump between tabs in the specified direction.                                      |
+| ctrl + arrow key | Use `ctrl` + any arrow key to jump between tabs in the specified direction.                                      |
 | :A                 | Switch between `.h` and `.cpp` files, in the same directory.                                                     |
 | F2                 | Opens a file browser. Use the arrow keys (or mouse) to navigate. Use `enter` to expand folders and select files. |
 | ctrl + p           | Search for a file.                                                                                               |
