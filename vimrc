@@ -1,4 +1,3 @@
-
 set nocompatible
 
 """""""""""""""""""""""""""""""""""""""""""""
@@ -66,9 +65,9 @@ set ruler
 set scrolloff=2
 
 " Tab settings
-set tabstop=4 " Tabs are 4 spaces
-set shiftwidth=4 " Tab characters are 4 spaces
-set softtabstop=4 " Soft tabs are 4 spaces
+set tabstop=2 " Tabs are 2 spaces
+set shiftwidth=2 " Tab characters are 2 spaces
+set softtabstop=2 " Soft tabs are 2 spaces
 set expandtab " Tab key creates spaces instead of tabs
 set autoindent
 set smartindent " Intelligently guess the indentation level of the next line
@@ -104,15 +103,31 @@ filetype plugin on
 set grepprg=grep\ -rinH\ $*
 
 " what the mouse pointer looks like in different modes
+set mouse=a
 set mouses=i-r:beam,s:updown,sd:udsizing,vs:leftright,vd:lrsizing,m:no,ml:up-arrow,v:rightup-arrow
 
 " Remove menu bar
 set guioptions=rLte
 
-" Put a line at 80 characters
-set colorcolumn=81
+"Highlight text over 80 chars in green
+highlight EightyChars ctermbg=green ctermfg=white guibg=#592929
+call matchadd('EightyChars', '\%81v.\+')
 
-"""""""""""""""""""""""""""""""""""""""""""""
+"Highlight text over 100 chars in light blue
+highlight OneHundredChars ctermbg=lightblue ctermfg=white guibg=#592929
+call matchadd('OneHundredChars', '\%101v.\+')
+
+"Highlight trailing whitespace in red
+highlight TrailingWhiteSpace ctermbg=red guibg=red
+call matchadd('TrailingWhiteSpace', '\s\+$')
+
+"Remove trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
+
+"Wrap arguments when using '==' from the command menu
+set cino=(0
+
+""""""""""""""""""""""""""""""""""""""""""""
 " Keybinds
 """""""""""""""""""""""""""""""""""""""""""""
 
@@ -121,20 +136,11 @@ nnoremap <leader>v :tabe! $MYVIMRC<CR>
 nnoremap <leader>cw :botright cwindow<CR>
 
 " Settings for dealing with buffers
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nnoremap <C-left> <C-w>h
+nnoremap <C-down> <C-w>j
+nnoremap <C-up> <C-w>k
+nnoremap <C-right> <C-w>l
 
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-
-inoremap <left> <nop>
-inoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
 
 " Make yank not stupid
 map Y y$
@@ -240,9 +246,3 @@ nnoremap <C-b> :BufExplorer<cr>
 
 """ NERDTree
 nnoremap <f2> :NERDTreeToggle<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""
-" Filetype specific
-"""""""""""""""""""""""""""""""""""""""""""""
-
-autocmd Filetype java setlocal colorcolumn=101
