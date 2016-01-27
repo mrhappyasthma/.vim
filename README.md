@@ -2,7 +2,7 @@
 
 This is my customized version of some useful `vim` tools.
 
-It is highly recommended that you back up your own .vimrc and .vim/ folder
+It is highly recommended that you back up your own `.vimrc` and `.vim/` folder
 before installing this.
 
 ## Useful Commands
