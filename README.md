@@ -63,4 +63,4 @@ After that is cloned, use `vim` to open an file and run `:BundleInstall`.
 *Note: These steps only need to be done once during install. You will NOT need
 to run them every time.*
 
-*Note2: On Mac, you may need to use `fn` key before using commands like `F2`. The arrow key mapping also does not seem to work.*
+*Note2: On Mac, you may need to use `fn` key before using commands like `F2`.*
