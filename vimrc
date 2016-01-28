@@ -246,3 +246,10 @@ nnoremap <C-b> :BufExplorer<cr>
 
 """ NERDTree
 nnoremap <f2> :NERDTreeToggle<CR>
+
+""""""""""""""""""""""""""""""""""""""'""""
+" File type specific
+"""""""""""""""""""""""""""""""""""""""""""
+
+""" Remove auto comment.
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
