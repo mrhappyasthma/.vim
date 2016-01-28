@@ -318,3 +318,4 @@ nnoremap <C-P> :CtrlPMRUFiles<CR>
 
 """ Tabularize
 vmap <S-T> :Tab/\|<CR>
+=======
