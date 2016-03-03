@@ -45,7 +45,7 @@ to run them every time.*
 ```
 cd ~/
 git clone --recursive https://github.com/mrhappyasthma/.vim.git
-ln -s .vimrc/vimrc .vimrc
+ln -s .vim/vimrc .vimrc
 ```
 
 or
@@ -53,7 +53,7 @@ or
 ```
 cd ~/
 git clone https://github.com/mrhappyasthma/.vim.git
-ln -s .vimrc/vimrc .vimrc
+ln -s .vim/vimrc .vimrc
 cd .vim
 git submodule update --init --recursive
 ```
