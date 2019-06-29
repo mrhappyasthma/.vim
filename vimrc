@@ -1,7 +1,6 @@
 " This is the vimrc file for use across all computers I use.
 " Changes specific to a specific computer should go in ~/.vimrc.
 " Changes specific to NeoVim should go in ~/.vim/init.vim
-
 set nocompatible
 
 " Used throughout to source platform specific
@@ -126,10 +125,6 @@ set mouses=i-r:beam,s:updown,sd:udsizing,vs:leftright,vd:lrsizing,m:no,ml:up-arr
 " Remove menu bar
 set guioptions=rLte
 
-"Highlight text over 80 chars in green
-highlight EightyChars ctermbg=green ctermfg=white guibg=#592929
-call matchadd('EightyChars', '\%81v.\+')
-
 " Make the dividers look nicer
 set fillchars+=vert:│
 
@@ -139,6 +134,11 @@ set hlsearch
 set autoread
 
 """""""""""""""""""""""""""""""""""""""""""""
+
+"Highlight text over 80 chars in green
+highlight EightyChars ctermbg=green ctermfg=white guibg=#592929
+call matchadd('EightyChars', '\%81v.\+')
+
 "Highlight text over 100 chars in light blue
 highlight OneHundredChars ctermbg=lightblue ctermfg=white guibg=#592929
 call matchadd('OneHundredChars', '\%101v.\+')
@@ -318,4 +318,3 @@ nnoremap <C-P> :CtrlPMRUFiles<CR>
 
 """ Tabularize
 vmap <S-T> :Tab/\|<CR>
-=======
